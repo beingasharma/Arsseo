@@ -17,7 +17,6 @@ export const Newsletter = () => {
               transition: 'all 0.5s ease-out',
             }}
           >
-            Be in the Know -
             <span className="highlight"> Send Us a Message</span>
           </h2>
 
