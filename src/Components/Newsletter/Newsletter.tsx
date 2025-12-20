@@ -31,7 +31,7 @@ export const Newsletter = () => {
             <input type="text" placeholder="Full Name" required />
             <input type="email" placeholder="Email" required />
             <input type="tel" placeholder="Phone Number" />
-            <textarea placeholder="Enter Your Message" rows={4}></textarea>
+            <textarea placeholder="Enter Your Message" rows={5}></textarea>
 
             <button type="submit" className="primary__btn">
               Submit
