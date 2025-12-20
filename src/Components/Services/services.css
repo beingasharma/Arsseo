@@ -4,14 +4,14 @@
 }
 
 .services__item-wrapper {
-    display: flex;
-    justify-content: space-between;
-    column-gap: 2rem;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2rem;
 }
 
 .services__item {
     background: var(--card-bg);
-    width: 25%;
+    width: 100%;
     padding: 20px;
     border-radius: .5rem;
 }

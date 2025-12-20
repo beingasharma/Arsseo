@@ -70,7 +70,7 @@ export const Footer = () => {
               transition: 'all 1s ease-out 0.5s',
             }}
           >
-            <h2>FutureMedia</h2>
+            <h2>ARSSEO</h2>
             <p className="description footer__desc">Grow with us</p>
             <p className="small__text description">
               "Grow with Us" is more than just an invitation to take
@@ -108,9 +108,10 @@ export const Footer = () => {
           </div>
         </div>
         <p className="copyright">
-          Copyright© {year}, developed by{' '}
-          <a href="https://github.com/xroobix">RooB</a>. All rights
-          reserved.
+          Copyright© {year}, 
+          {/* , developed by{' '} */}
+          {/* <a href="https://github.com/xroobix">RooB</a>.  */}
+          All rights reserved.
         </p>
       </div>
     </footer>

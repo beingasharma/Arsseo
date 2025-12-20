@@ -5,25 +5,56 @@ import { useInView } from 'framer-motion';
 
 const servicesData = [
     {
-        icon: "ri-apps-line",
-        title: "App Development",
-        description: "It is the process of creating software applications for mobile devices that can range from simple applications designed for a specific purpose to complex apps with multiple features and integrations.",
+        icon: "ri-school-fill",
+        title: "Educational Institutions",
+        description: "",
     },
     {
         icon: "ri-code-s-slash-line",
-        title: "Web Design",
-        description: "A well-designed website can help businesses and organizations establish a strong online presence, improve user engagement, and increase conversions.",
+        title: "Industrial Companies",
+        description: "",
     },
     {
-        icon: "ri-landscape-line",
-        title: "Graphics Design",
-        description: "The goal of graphics design is to create visual content that is both aesthetically pleasing and informative, while also aligning with a brand's identity and marketing objectives.",
+        icon: "ri-home-gear-line",
+        title: "Home Repair",
+        description: "",
     },
     {
         icon: "ri-rocket-line",
-        title: "Digital Marketing",
-        description: "Digital marketing is promoting products or services using digital channels to reach and engage with target audiences, increase brand awareness, and drive conversions.",
+        title: "Lawyers & Law Firms",
+        description: "",
     },
+     {
+        icon: "ri-health-book-fill",
+        title: "Medical & Health",
+        description: "",
+    },
+     {
+        icon: "ri-rocket-line",
+        title: "Baby Products",
+        description: "",
+    },
+     {
+        icon: "ri-home-9-fill",
+        title: "Real Estate",
+        description: "",
+    },
+     {
+        icon: "ri-restaurant-2-fill",
+        title: "Restaurants",
+        description: "",
+    },
+     {
+        icon: "ri-tooth-line",
+        title: "Dental",
+        description: "",
+    },
+     {
+        icon: "ri-home-9-line",
+        title: "Roofing",
+        description: "",
+    },
+
 ]
 
 export const Services = () => {
@@ -33,9 +64,9 @@ export const Services = () => {
     <section id="services" ref={ref}>
       <div className="container">
         <div className="services__top-content">
-          <h6 className="subtitle">Our Services</h6>
-          <h2>Save time managing your business with</h2>
-          <h2 className="highlight">our best services</h2>
+          <h6 className="subtitle">Industries We Serve</h6>
+          {/* <h2>Save time managing your business with</h2>
+          <h2 className="highlight">our best services</h2> */}
         </div>
         <div className="services__item-wrapper">
             {servicesData.map((i, idx) => (
