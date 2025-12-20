@@ -64,7 +64,7 @@ export const Services = () => {
     <section id="services" ref={ref}>
       <div className="container">
         <div className="services__top-content">
-          <h6 className="subtitle">Industries We Serve</h6>
+          <h2> Industries We Serve</h2>
           {/* <h2>Save time managing your business with</h2>
           <h2 className="highlight">our best services</h2> */}
         </div>

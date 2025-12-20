@@ -28,7 +28,7 @@ function App() {
             <Header theme={theme} changeTheme={changeTheme} />
             <main>
                 <Hero theme={theme} />
-                <Counter />
+                {/* <Counter /> */}
                 <Services />
                 <About />
                 <Team />
