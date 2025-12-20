@@ -25,16 +25,12 @@ export const Hero: FC<Props> = ({ theme }) => {
             }}
           >
             <div>
-              <h2>We're Creating Perfect</h2>
-              <h2>Digital Products To</h2>
-              <h2 className="highlight">Promote Your Brand</h2>
+              <h2>Your Path to Higher Rankings</h2>
+              <h2>and Increased Web </h2>
+              <h2 className="highlight">Traffic Starts Here</h2>
             </div>
             <p className="description">
-              FutureMedia is a digital marketing agency that helps
-              businesses grow online through services like SEO, social
-              media marketing, and PPC advertising. We're dedicated to
-              innovation and delivering results-driven strategies for
-              our clients.
+              Grow your business with ARS SEO Agency, where strategy meets performance. We create customized SEO campaigns that increase rankings, drive targeted traffic, and improve conversions. Our approach combines technical expertise, content optimization, and ongoing analysis to deliver consistent and scalable results
             </p>
             <div className="hero__btns">
               <button className="primary__btn">
