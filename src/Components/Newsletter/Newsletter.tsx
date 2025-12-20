@@ -7,7 +7,7 @@ export const Newsletter = () => {
   const isInView = useInView(ref, { once: true });
 
   return (
-    <section className="newsletter" ref={ref}>
+    <section id="newsletter" className="newsletter" ref={ref}>
       <div className="container">
         <div className="newsletter__wrapper">
           <h2

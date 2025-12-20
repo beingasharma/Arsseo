@@ -13,8 +13,8 @@ export const Header: FC<Props> = ({ theme, changeTheme }) => {
       display: 'Home',
     },
     {
-      path: '#projects',
-      display: 'Projects',
+      path: '#newsletter',
+      display: 'Contact Us',
     },
     {
       path: '#services',
