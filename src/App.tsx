@@ -7,6 +7,7 @@ import { Header } from './Components/Header/Header';
 import { Hero } from './Components/Hero/Hero';
 import { Newsletter } from './Components/Newsletter/Newsletter';
 import { Services } from './Components/Services/Services';
+import { Service } from './Components/Service/Service';
 import { Team } from './Components/Team/Team';
 import { Testimonial } from './Components/Testimonial/Testimonial';
 
@@ -29,6 +30,7 @@ function App() {
             <main>
                 <Hero theme={theme} />
                 {/* <Counter /> */}
+                <Service />
                 <Services />
                 <About />
                 <Team />

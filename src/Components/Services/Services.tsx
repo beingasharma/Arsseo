@@ -3,38 +3,7 @@ import { useState } from "react";
 import "./services.css";
 
 const tabContent = {
-  whiteLabel: {
-    services: [
-      {
-        title: "White Label SEO Services",
-        desc: "Offer scalable SEO under your brand with on-page, off-page, and technical support tailored to your client's needs.",
-      },
-      {
-        title: "White Label PPC Services",
-        desc: "Let us manage high-performing paid campaigns behind the scenes while you retain full brand ownership and client communication.",
-      },
-      {
-        title: "White Label Lead Generation",
-        desc: "We build and manage complete lead generation funnels, from landing pages to ads, branded entirely under your business.",
-      },
-      {
-        title: "White Label Web Design",
-        desc: "Offer your clients stunning website designs and UI/UX enhancements while we handle delivery behind the scenes.",
-      },
-      {
-        title: "White Label Web Development",
-        desc: "Scale your agency’s web development capacity without hiring, using our expert developers for any tech stack you need.",
-      },
-    ],
-    other: [
-      "White Label Website Builder",
-      "White Label Lead Generation",
-      "White Label Graphic Design",
-      "White Label Digital Marketing",
-      "White Label Link Building",
-    ],
-  },
-
+  
   seo: {
     services: [
       {
@@ -69,41 +38,7 @@ const tabContent = {
     ],
   },
 
-  ppc: {
-    services: [
-      {
-        title: "Google Ads",
-        desc: "Launch high-converting paid search campaigns targeting users actively searching for your products or services on Google.",
-      },
-      {
-        title: "E-commerce PPC",
-        desc: "Increase product sales with precision-targeted ads on Google Shopping, Amazon, and Meta tailored to your eCommerce store’s inventory.",
-      },
-      {
-        title: "Facebook Ads",
-        desc: "Reach and retarget audiences on Meta platforms with scroll-stopping creatives and data-driven performance campaigns.",
-      },
-      {
-        title: "Amazon PPC",
-        desc: "Maximize product visibility and ROI on Amazon with expertly managed Sponsored Product, Brand, and Display campaigns.",
-      },
-      {
-        title: "LinkedIn Ads",
-        desc: "Target high-value B2B decision-makers with advanced targeting and CPL-optimized bid strategies integrated with CRM tracking.",
-      },
-    ],
-    other: [
-      "PPC Audits & Strategy Development",
-      "Remarketing Campaigns",
-      "Landing Page Optimization",
-      "App Install Campaigns",
-      "Call-Only Campaigns",
-      "Seasonal & Event-Based PPC",
-      "App Promotion Campaigns",
-      "Conversion Rate Optimisation (CRO)",
-      "Geo-Fencing & Location-Based Ads",
-    ],
-  },
+  
 
   webDesign: {
     services: [
@@ -169,7 +104,7 @@ const tabContent = {
 type TabKey = keyof typeof tabContent;
 
 export const Services = () => {
-const [activeTab, setActiveTab] = useState<TabKey>("whiteLabel");
+const [activeTab, setActiveTab] = useState<TabKey>("seo");
 
   const current = tabContent[activeTab];
 
@@ -181,9 +116,8 @@ const [activeTab, setActiveTab] = useState<TabKey>("whiteLabel");
 
       {/* Tabs */}
       <div className="services__tabs">
-        <button onClick={() => setActiveTab("whiteLabel")}>White Label Services</button>
         <button onClick={() => setActiveTab("seo")}>SEO Services</button>
-        <button onClick={() => setActiveTab("ppc")}>PPC Services</button>
+        
         <button onClick={() => setActiveTab("webDesign")}>Website Design Services</button>
         <button onClick={() => setActiveTab("webDev")}>Website Development</button>
       </div>
