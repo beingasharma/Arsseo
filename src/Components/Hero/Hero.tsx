@@ -33,9 +33,16 @@ export const Hero: FC<Props> = ({ theme }) => {
               Grow your business with ARS SEO Agency, where strategy meets performance. We create customized SEO campaigns that increase rankings, drive targeted traffic, and improve conversions. Our approach combines technical expertise, content optimization, and ongoing analysis to deliver consistent and scalable results
             </p>
             <div className="hero__btns">
-              <button className="primary__btn">
-                Get Started Now
-              </button>
+  <button
+    className="primary__btn"
+    onClick={() => {
+      document
+        .getElementById('newsletter')
+        ?.scrollIntoView({ behavior: 'smooth' });
+    }}
+  >
+    Get Started Now
+  </button>
               <button className="secondary__btn">
                 Discover More
               </button>
