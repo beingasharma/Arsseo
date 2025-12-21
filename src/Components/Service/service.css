@@ -8,9 +8,10 @@
 
 .services__item-wrapper {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(220px, 2fr));
     gap: 2rem;
 }
+
 
 .services__item {
     background: var(--card-bg);
@@ -46,7 +47,7 @@
 
 @media only screen and (max-width:992px) {
     .services__top-content h2 {
-        font-size: 1.5rem;
+        font-size: 2.5rem;
     }
     .services__item-wrapper {
         flex-wrap: wrap;
