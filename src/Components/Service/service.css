@@ -63,8 +63,10 @@
 
 @media only screen and (max-width:600px) {
     .services__item-wrapper {
-        flex-direction: column;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.2rem;
     }
+
     .services__item {
         width: 100%;
     }
