@@ -10,10 +10,12 @@
     justify-content: space-between;
 }
 
-.logo a {
-    text-decoration: none;
+.logo img {
+    height:120px;
+    width: auto;
+    display: block;
+    object-fit: contain;
 }
-
 .menu {
     display: flex;
     align-items: center;

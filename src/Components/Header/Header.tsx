@@ -99,10 +99,10 @@ export const Header: FC<Props> = ({ theme, changeTheme }) => {
       <div className="container">
         <div className="nav__wrapper">
           <div className="logo">
-            <h2>
-              <a href="#">ARSSEO</a>
-            </h2>
-          </div>
+  <a href="/">
+    <img src="/icon.png" alt="ARS Digital Solutions Logo" />
+  </a>
+</div>
           <div
             className="navigation"
             ref={menuRef}
