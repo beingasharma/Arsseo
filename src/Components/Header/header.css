@@ -131,7 +131,7 @@
         line-height: 50px;
     }
 
-    .logo h2 {
-        font-size: 2rem;
+    .logo img {
+        height: 50px;
     }
 }
