@@ -16,10 +16,17 @@ export const Header: FC<Props> = ({ theme, changeTheme }) => {
     {
       display: 'Services',
       dropdown: [
-        { path: '#web', display: 'Web Development' },
-        { path: '#app', display: 'App Development' },
-        { path: '#seo', display: 'SEO Services' },
-        { path: '#design', display: 'UI/UX Design' },
+        { path: '#web', display: 'Search Engine Optimization (SEO)' },
+        { path: '#app', display: 'Pay Per Click (PPC) Management' },
+        { path: '#seo', display: 'Social Media Marketing' },
+        { path: '#design', display: 'Content Marketing' },
+        { path: '#design', display: 'Email Marketing' },
+        { path: '#design', display: 'E-Commerce Marketing' },
+        { path: '#design', display: 'Website Design' },
+        { path: '#design', display: 'Custom Website Design' },
+        { path: '#design', display: 'E-Commerce Web Design' },
+        { path: '#design', display: 'Graphic Designing' },
+
       ],
     },
     { path: '#about', display: 'About' },
