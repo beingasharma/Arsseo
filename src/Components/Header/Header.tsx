@@ -1,4 +1,5 @@
 import { FC, useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import './header.css';
 
 interface Props {
@@ -10,28 +11,60 @@ export const Header: FC<Props> = ({ theme, changeTheme }) => {
   const headerRef = useRef<HTMLDivElement>(null);
   const menuRef = useRef<HTMLDivElement>(null);
 
-  const nav__links = [
-    { path: '#home', display: 'Home' },
-    { path: '#newsletter', display: 'Contact Us' },
-    {
-      display: 'Services',
-      dropdown: [
-        { path: '#web', display: 'Search Engine Optimization (SEO)' },
-        { path: '#app', display: 'Pay Per Click (PPC) Management' },
-        { path: '#seo', display: 'Social Media Marketing' },
-        { path: '#design', display: 'Content Marketing' },
-        { path: '#design', display: 'Email Marketing' },
-        { path: '#design', display: 'E-Commerce Marketing' },
-        { path: '#design', display: 'Website Design' },
-        { path: '#design', display: 'Custom Website Design' },
-        { path: '#design', display: 'E-Commerce Web Design' },
-        { path: '#design', display: 'Graphic Designing' },
+const nav__links = [
+  { path: '/', display: 'Home' },
 
-      ],
-    },
-    { path: '#about', display: 'About' },
-    { path: '#blog', display: 'Blog' },
-  ];
+  {
+    display: 'Services',
+    dropdown: [
+      {
+        path: '/services/search-engine-optimization',
+        display: 'Search Engine Optimization (SEO)',
+      },
+      {
+        path: '/services/pay-per-click',
+        display: 'Pay Per Click (PPC) Management',
+      },
+      {
+        path: '/services/social-media-marketing',
+        display: 'Social Media Marketing',
+      },
+      {
+        path: '/services/content-marketing',
+        display: 'Content Marketing',
+      },
+      {
+        path: '/services/email-marketing',
+        display: 'Email Marketing',
+      },
+      {
+        path: '/services/ecommerce-marketing',
+        display: 'E-Commerce Marketing',
+      },
+      {
+        path: '/services/website-design',
+        display: 'Website Design',
+      },
+      {
+        path: '/services/custom-website-design',
+        display: 'Custom Website Design',
+      },
+      {
+        path: '/services/ecommerce-web-design',
+        display: 'E-Commerce Web Design',
+      },
+      {
+        path: '/services/graphic-designing',
+        display: 'Graphic Designing',
+      },
+    ],
+  },
+
+  { path: '/#about', display: 'About' },
+  { path: '/#blog', display: 'Blog' },
+  { path: '/#newsletter', display: 'Contact Us' },
+];
+
 
   const changeStickiness = () => {
     if (document.documentElement.scrollTop > 80) {
@@ -43,31 +76,13 @@ export const Header: FC<Props> = ({ theme, changeTheme }) => {
 
   useEffect(() => {
     window.addEventListener('scroll', changeStickiness);
-    return () => window.removeEventListener('scroll', changeStickiness);
+    return () =>
+      window.removeEventListener('scroll', changeStickiness);
   }, []);
 
-  const handleLinkClick = (e: React.MouseEvent<HTMLElement>) => {
-    e.preventDefault();
-
-    const target = e.target as HTMLAnchorElement;
-    const targetAttribute = target.getAttribute('href');
-
-    if (targetAttribute) {
-      const element = document.querySelector(targetAttribute) as HTMLElement;
-      if (element) {
-        window.scrollTo({
-          top: element.offsetTop - 80,
-          behavior: 'smooth',
-        });
-      }
-    }
-
-    // close mobile menu after click
-    menuRef.current?.classList.remove('menu__active');
-  };
-
-  const toggleMobileMenu = () =>
+  const toggleMobileMenu = () => {
     menuRef.current?.classList.toggle('menu__active');
+  };
 
   return (
     <header className="header" ref={headerRef}>
@@ -75,9 +90,9 @@ export const Header: FC<Props> = ({ theme, changeTheme }) => {
         <div className="nav__wrapper">
           {/* LOGO */}
           <div className="logo">
-            <a href="/">
+            <Link to="/">
               <img src="/icon.png" alt="ARS Digital Solutions" />
-            </a>
+            </Link>
           </div>
 
           {/* NAV */}
@@ -92,14 +107,7 @@ export const Header: FC<Props> = ({ theme, changeTheme }) => {
                 >
                   {item.dropdown ? (
                     <>
-                      <span
-                        className="menu__link"
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          const parent = e.currentTarget.parentElement;
-                          parent?.classList.toggle('active');
-                        }}
-                      >
+                      <span className="menu__link">
                         {item.display}
                         <i className="ri-arrow-down-s-line" />
                       </span>
@@ -107,24 +115,27 @@ export const Header: FC<Props> = ({ theme, changeTheme }) => {
                       <ul className="dropdown">
                         {item.dropdown.map((d, i) => (
                           <li key={i}>
-                            <a
-                              href={d.path}
-                              onClick={handleLinkClick}
+                            <Link
+                              to={d.path}
+                              onClick={() =>
+                                menuRef.current?.classList.remove(
+                                  'menu__active'
+                                )
+                              }
                             >
                               {d.display}
-                            </a>
+                            </Link>
                           </li>
                         ))}
                       </ul>
                     </>
                   ) : (
-                    <a
-                      href={item.path}
+                    <Link
+                      to={item.path}
                       className="menu__link"
-                      onClick={handleLinkClick}
                     >
                       {item.display}
-                    </a>
+                    </Link>
                   )}
                 </li>
               ))}
@@ -133,23 +144,14 @@ export const Header: FC<Props> = ({ theme, changeTheme }) => {
 
           {/* RIGHT */}
           <div className="right-menu">
-            <div className="light__mode">
-              <button onClick={changeTheme}>
-                {theme === 'light-theme' ? (
-                  <>
-                    <i className="ri-moon-line" />
-                    <span>Dark Mode</span>
-                  </>
-                ) : (
-                  <>
-                    <i className="ri-sun-line" />
-                    <span>Light Mode</span>
-                  </>
-                )}
-              </button>
-            </div>
+            <button onClick={changeTheme}>
+              {theme === 'light-theme' ? 'Dark' : 'Light'}
+            </button>
 
-            <span className="mobile__menu" onClick={toggleMobileMenu}>
+            <span
+              className="mobile__menu"
+              onClick={toggleMobileMenu}
+            >
               <i className="ri-menu-line" />
             </span>
           </div>
