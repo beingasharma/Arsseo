@@ -11,22 +11,22 @@ export const Header: FC<Props> = ({ theme, changeTheme }) => {
   const headerRef = useRef<HTMLDivElement>(null);
   const menuRef = useRef<HTMLDivElement>(null);
 
-const nav__links = [
+  const nav__links = [
   { path: '/', display: 'Home' },
 
   {
     display: 'Services',
     dropdown: [
       {
-        path: '/services/search-engine-optimization',
+        path: '/services/on-page-seo',
         display: 'Search Engine Optimization (SEO)',
       },
       {
-        path: '/services/pay-per-click',
+        path: '/services/ppc',
         display: 'Pay Per Click (PPC) Management',
       },
       {
-        path: '/services/social-media-marketing',
+        path: '/services/social-media',
         display: 'Social Media Marketing',
       },
       {
@@ -143,15 +143,24 @@ const nav__links = [
           </div>
 
           {/* RIGHT */}
-          <div className="right-menu">
-            <button onClick={changeTheme}>
-              {theme === 'light-theme' ? 'Dark' : 'Light'}
-            </button>
+<div className="right-menu">
+            <div className="light__mode">
+              <button onClick={changeTheme}>
+                {theme === 'light-theme' ? (
+                  <>
+                    <i className="ri-moon-line" />
+                    <span>Dark Mode</span>
+                  </>
+                ) : (
+                  <>
+                    <i className="ri-sun-line" />
+                    <span>Light Mode</span>
+                  </>
+                )}
+              </button>
+            </div>
 
-            <span
-              className="mobile__menu"
-              onClick={toggleMobileMenu}
-            >
+            <span className="mobile__menu" onClick={toggleMobileMenu}>
               <i className="ri-menu-line" />
             </span>
           </div>
