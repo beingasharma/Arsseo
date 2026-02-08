@@ -12,58 +12,58 @@ export const Header: FC<Props> = ({ theme, changeTheme }) => {
   const menuRef = useRef<HTMLDivElement>(null);
 
   const nav__links = [
-  { path: '/', display: 'Home' },
+    { path: '/', display: 'Home' },
 
-  {
-    display: 'Services',
-    dropdown: [
-      {
-        path: '/services/on-page-seo',
-        display: 'Search Engine Optimization (SEO)',
-      },
-      {
-        path: '/services/ppc',
-        display: 'Pay Per Click (PPC) Management',
-      },
-      {
-        path: '/services/social-media',
-        display: 'Social Media Marketing',
-      },
-      {
-        path: '/services/content-marketing',
-        display: 'Content Marketing',
-      },
-      {
-        path: '/services/email-marketing',
-        display: 'Email Marketing',
-      },
-      {
-        path: '/services/ecommerce-marketing',
-        display: 'E-Commerce Marketing',
-      },
-      {
-        path: '/services/website-design',
-        display: 'Website Design',
-      },
-      {
-        path: '/services/custom-website-design',
-        display: 'Custom Website Design',
-      },
-      {
-        path: '/services/ecommerce-web-design',
-        display: 'E-Commerce Web Design',
-      },
-      {
-        path: '/services/graphic-designing',
-        display: 'Graphic Designing',
-      },
-    ],
-  },
+    {
+      display: 'Services',
+      dropdown: [
+        {
+          path: '/services/on-page-seo',
+          display: 'Search Engine Optimization (SEO)',
+        },
+        {
+          path: '/services/ppc',
+          display: 'Pay Per Click (PPC) Management',
+        },
+        {
+          path: '/services/social-media',
+          display: 'Social Media Marketing',
+        },
+        {
+          path: '/services/content-marketing',
+          display: 'Content Marketing',
+        },
+        {
+          path: '/services/email-marketing',
+          display: 'Email Marketing',
+        },
+        {
+          path: '/services/ecommerce-marketing',
+          display: 'E-Commerce Marketing',
+        },
+        {
+          path: '/services/website-design',
+          display: 'Website Design',
+        },
+        {
+          path: '/services/custom-website-design',
+          display: 'Custom Website Design',
+        },
+        {
+          path: '/services/ecommerce-web-design',
+          display: 'E-Commerce Web Design',
+        },
+        {
+          path: '/services/graphic-designing',
+          display: 'Graphic Designing',
+        },
+      ],
+    },
 
-  { path: '/#about', display: 'About' },
-  { path: '/#blog', display: 'Blog' },
-  { path: '/#newsletter', display: 'Contact Us' },
-];
+    { path: '/#about', display: 'About' },
+    { path: '/#blog', display: 'Blog' },
+    { path: '/#newsletter', display: 'Contact Us' },
+  ];
 
 
   const changeStickiness = () => {
@@ -101,9 +101,8 @@ export const Header: FC<Props> = ({ theme, changeTheme }) => {
               {nav__links.map((item, idx) => (
                 <li
                   key={idx}
-                  className={`menu__item ${
-                    item.dropdown ? 'has-dropdown' : ''
-                  }`}
+                  className={`menu__item ${item.dropdown ? 'has-dropdown' : ''
+                    }`}
                 >
                   {item.dropdown ? (
                     <>
@@ -143,7 +142,7 @@ export const Header: FC<Props> = ({ theme, changeTheme }) => {
           </div>
 
           {/* RIGHT */}
-<div className="right-menu">
+          {/* <div className="right-menu">
             <div className="light__mode">
               <button onClick={changeTheme}>
                 {theme === 'light-theme' ? (
@@ -163,7 +162,7 @@ export const Header: FC<Props> = ({ theme, changeTheme }) => {
             <span className="mobile__menu" onClick={toggleMobileMenu}>
               <i className="ri-menu-line" />
             </span>
-          </div>
+          </div> */}
         </div>
       </div>
     </header>
