@@ -142,7 +142,7 @@ export const Header: FC<Props> = ({ theme, changeTheme }) => {
           </div>
 
           {/* RIGHT */}
-          {/* <div className="right-menu">
+          <div className="right-menu">
             <div className="light__mode">
               <button onClick={changeTheme}>
                 {theme === 'light-theme' ? (
@@ -162,7 +162,7 @@ export const Header: FC<Props> = ({ theme, changeTheme }) => {
             <span className="mobile__menu" onClick={toggleMobileMenu}>
               <i className="ri-menu-line" />
             </span>
-          </div> */}
+          </div>
         </div>
       </div>
     </header>
